@@ -1,0 +1,84 @@
+Welcome to the DNA Profiling Application.
+Enter command or # to exit: load_db small.txt
+Loading database...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+No DNA loaded.
+
+
+No DNA has been processed.
+
+Enter command or # to exit: load_dna 1.txt
+Loading DNA...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+DNA loaded: 
+AAGGTAAGTTTAGAATATAAAAGGTGAGTTAAATAGAATAGGTTAAAATTAAAGGAGATCAGATCAGATCAGATCTATCTATCTATCTATCTATCAGAAAAGAGTAAATAGTTAAAGAGTAAGATATTGAATTAATGGAAAATATTGTTGGGGAAAGGAGGGATAGAAGG
+
+No DNA has been processed.
+
+Enter command or # to exit: process
+Processing DNA...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+DNA loaded: 
+AAGGTAAGTTTAGAATATAAAAGGTGAGTTAAATAGAATAGGTTAAAATTAAAGGAGATCAGATCAGATCAGATCTATCTATCTATCTATCTATCAGAAAAGAGTAAATAGTTAAAGAGTAAGATATTGAATTAATGGAAAATATTGTTGGGGAAAGGAGGGATAGAAGG
+
+DNA processed, STR counts: 
+AGATC: 4
+AATG: 1
+TATC: 5
+
+Enter command or # to exit: search
+Searching database...
+Found in database!  DNA matches: Bob
+Enter command or # to exit: #
+*********************************************************
+ourvector<i> stats:
+ # of vectors created:   15
+ # of elements inserted: 30
+ # of elements accessed: 56
+*********************************************************
+*********************************************************
+ourvector<6record> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 82
+*********************************************************
+*********************************************************
+ourvector<NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE> stats:
+ # of vectors created:   13
+ # of elements inserted: 209
+ # of elements accessed: 1917
+*********************************************************
+*********************************************************
+ourvector<9ourvectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE> stats:
+ # of vectors created:   1
+ # of elements inserted: 3
+ # of elements accessed: 32
+*********************************************************
+
+ourvector<int> was used to store the STR counts, so they must have been created
+when load_db or process were called.
+
+ourvector<record> is only created once, at the start of the program.
+
+ourvector<string> was the main ourvector type used throughout the program so it 
+makes sequences that it would have the highest stats. It was used to store everything 
+from the individual STR characters, to the DNA sequences
+
+ourvector<ourvector<string>> is only created once at the beginning of the program 
+to hold the STRs from small.txt
+

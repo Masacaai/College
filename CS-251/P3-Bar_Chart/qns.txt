@@ -1,0 +1,4 @@
+How much testing is too much testing? I assume we don't need to test accessors like getters and [] operator
+Do we test all the operators individually?
+When we call clear() in barchart.h, should it get rid of everything?
+Do we need to test dump() even though it's only used for debugging?

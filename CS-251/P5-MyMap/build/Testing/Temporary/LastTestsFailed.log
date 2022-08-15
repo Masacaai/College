@@ -1,0 +1,16 @@
+1:mymap.intInt
+2:mymap.intStr
+3:mymap.intDbl
+4:mymap.intChr
+5:mymap.strInt
+6:mymap.strStr
+7:mymap.strDbl
+8:mymap.strChr
+9:mymap.dblInt
+10:mymap.dblStr
+11:mymap.dblDbl
+12:mymap.dblChr
+13:mymap.chrInt
+14:mymap.chrStr
+15:mymap.chrDbl
+16:mymap.chrChr

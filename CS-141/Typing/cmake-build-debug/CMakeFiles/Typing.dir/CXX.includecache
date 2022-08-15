@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/masacaai/Code/CLionProjects/CS141/Typing/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+cassert
+-
+cctype
+-
+ctime
+-
+

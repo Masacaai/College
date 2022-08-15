@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/masacaai/Code/CLionProjects/CS141/DivvyData/main.cpp
+iostream
+-
+fstream
+-
+cassert
+-
+cctype
+-
+vector
+-
+string
+-
+algorithm
+-
+cmath
+-
+iomanip
+-
+

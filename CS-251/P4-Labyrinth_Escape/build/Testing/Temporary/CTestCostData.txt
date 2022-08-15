@@ -1,0 +1,22 @@
+grid.defaultConstructor 92 2.76516e-05
+grid.paramConstructor 93 0.00201878
+grid.destructor 11 0.000315768
+grid.copyConstructor 62 0.00555637
+grid.copyOperator 78 0.00604525
+grid.numrows 93 3.21391e-05
+grid.numcols 93 3.24662e-05
+grid.size 93 0.000399274
+grid.accessOperator 93 0.00306018
+maze.basic 37 5.63255e-05
+maze.tryingToGoThroughWalls 38 6.27201e-05
+maze.startOnItem 33 7.58998e-05
+maze.invalidChar 31 6.11884e-05
+maze.escapeRegularMaze 25 0.000284359
+maze.escapeTwistyMaze 23 0.000218239
+grid.paramConstructorZeroValues 18 0.000106131
+grid.copyOperatorInitialization 11 0.0309762
+grid.copyOperatorPreExisting 11 0.0429846
+grid.accessOperatorInvalid 10 0.00470181
+maze.AllPurposeMaze1 7 0.000292941
+maze.AllPurposeMaze2 1 0.00183783
+---

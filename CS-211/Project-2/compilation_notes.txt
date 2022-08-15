@@ -1,0 +1,27 @@
+
+
+
+Suppose you want to write several distinct testing programs for your functions.
+Or, you want to write more than one application program that uses your set of functions.
+
+How can we accomplish this?  Instead of having main in prog3.c, we can instead have
+it in a sepearate .c file -- i.e., we can have several "application" programs which
+use the set of utility functions in their own particularly way; each such application
+has its own .c file
+
+To make this work, we can use "separate compilation".
+
+Step one:  compile prog3.c into an object file (with a .o extension).  An object file
+contains "machine code", but it isn't a runnable program on its own.  
+
+        gcc -c -D_LIB prog3.c
+
+You should now see a file called prog3.o
+
+STEP 2:  now how to we structure and compile an application program?  File test0.c 
+gives a template for such a file (the main thing is to make sure it includes
+prog3.h).  Once you have the .o file, you can compile your application program as:
+
+        gcc test0.c prog3.o -o test0
+
+This should produce a runnable executable named test0.

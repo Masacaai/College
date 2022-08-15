@@ -1,0 +1,435 @@
+Start testing: Mar 31 20:50 CDT
+----------------------------------------------------------
+1/16 Testing: mymap.intInt
+1/16 Test: mymap.intInt
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.intInt" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.intInt" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.intInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.intInt
+[       OK ] mymap.intInt (187 ms)
+[----------] 1 test from mymap (187 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (187 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.intInt" end time: Mar 31 20:50 CDT
+"mymap.intInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/16 Testing: mymap.intStr
+2/16 Test: mymap.intStr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.intStr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.intStr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.intStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.intStr
+[       OK ] mymap.intStr (186 ms)
+[----------] 1 test from mymap (186 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (186 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.intStr" end time: Mar 31 20:50 CDT
+"mymap.intStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/16 Testing: mymap.intDbl
+3/16 Test: mymap.intDbl
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.intDbl" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.intDbl" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.intDbl
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.intDbl
+[       OK ] mymap.intDbl (233 ms)
+[----------] 1 test from mymap (233 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (233 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.intDbl" end time: Mar 31 20:50 CDT
+"mymap.intDbl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/16 Testing: mymap.intChr
+4/16 Test: mymap.intChr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.intChr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.intChr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.intChr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.intChr
+[       OK ] mymap.intChr (167 ms)
+[----------] 1 test from mymap (167 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (167 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.intChr" end time: Mar 31 20:50 CDT
+"mymap.intChr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/16 Testing: mymap.strInt
+5/16 Test: mymap.strInt
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.strInt" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.strInt" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.strInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.strInt
+[       OK ] mymap.strInt (205 ms)
+[----------] 1 test from mymap (205 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (205 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.strInt" end time: Mar 31 20:50 CDT
+"mymap.strInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/16 Testing: mymap.strStr
+6/16 Test: mymap.strStr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.strStr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.strStr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.strStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.strStr
+[       OK ] mymap.strStr (201 ms)
+[----------] 1 test from mymap (201 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (201 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.strStr" end time: Mar 31 20:50 CDT
+"mymap.strStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/16 Testing: mymap.strDbl
+7/16 Test: mymap.strDbl
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.strDbl" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.strDbl" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.strDbl
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.strDbl
+[       OK ] mymap.strDbl (236 ms)
+[----------] 1 test from mymap (236 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (236 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.strDbl" end time: Mar 31 20:50 CDT
+"mymap.strDbl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/16 Testing: mymap.strChr
+8/16 Test: mymap.strChr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.strChr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.strChr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.strChr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.strChr
+[       OK ] mymap.strChr (191 ms)
+[----------] 1 test from mymap (191 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (191 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.strChr" end time: Mar 31 20:50 CDT
+"mymap.strChr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/16 Testing: mymap.dblInt
+9/16 Test: mymap.dblInt
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.dblInt" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.dblInt" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.dblInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.dblInt
+[       OK ] mymap.dblInt (305 ms)
+[----------] 1 test from mymap (305 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (305 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.dblInt" end time: Mar 31 20:50 CDT
+"mymap.dblInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/16 Testing: mymap.dblStr
+10/16 Test: mymap.dblStr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.dblStr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.dblStr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.dblStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.dblStr
+[       OK ] mymap.dblStr (305 ms)
+[----------] 1 test from mymap (305 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (305 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.dblStr" end time: Mar 31 20:50 CDT
+"mymap.dblStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/16 Testing: mymap.dblDbl
+11/16 Test: mymap.dblDbl
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.dblDbl" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.dblDbl" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.dblDbl
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.dblDbl
+[       OK ] mymap.dblDbl (354 ms)
+[----------] 1 test from mymap (354 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (354 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.dblDbl" end time: Mar 31 20:50 CDT
+"mymap.dblDbl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/16 Testing: mymap.dblChr
+12/16 Test: mymap.dblChr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.dblChr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.dblChr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.dblChr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.dblChr
+[       OK ] mymap.dblChr (294 ms)
+[----------] 1 test from mymap (294 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (294 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.dblChr" end time: Mar 31 20:50 CDT
+"mymap.dblChr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/16 Testing: mymap.chrInt
+13/16 Test: mymap.chrInt
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.chrInt" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.chrInt" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.chrInt
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.chrInt
+[       OK ] mymap.chrInt (164 ms)
+[----------] 1 test from mymap (164 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (164 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.chrInt" end time: Mar 31 20:50 CDT
+"mymap.chrInt" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/16 Testing: mymap.chrStr
+14/16 Test: mymap.chrStr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.chrStr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.chrStr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.chrStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.chrStr
+[       OK ] mymap.chrStr (184 ms)
+[----------] 1 test from mymap (184 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (184 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.chrStr" end time: Mar 31 20:50 CDT
+"mymap.chrStr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/16 Testing: mymap.chrDbl
+15/16 Test: mymap.chrDbl
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.chrDbl" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.chrDbl" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.chrDbl
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.chrDbl
+[       OK ] mymap.chrDbl (236 ms)
+[----------] 1 test from mymap (236 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (236 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.chrDbl" end time: Mar 31 20:50 CDT
+"mymap.chrDbl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/16 Testing: mymap.chrChr
+16/16 Test: mymap.chrChr
+Command: "/home/masacaai/Code/CS-251/P5-MyMap/build/tests" "--gtest_filter=mymap.chrChr" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P5-MyMap/build
+"mymap.chrChr" start time: Mar 31 20:50 CDT
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P5-MyMap/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = mymap.chrChr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from mymap
+[ RUN      ] mymap.chrChr
+[       OK ] mymap.chrChr (166 ms)
+[----------] 1 test from mymap (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (166 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"mymap.chrChr" end time: Mar 31 20:50 CDT
+"mymap.chrChr" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 31 20:50 CDT

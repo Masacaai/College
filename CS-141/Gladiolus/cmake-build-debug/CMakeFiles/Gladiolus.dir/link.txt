@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Gladiolus.dir/main.cpp.o -o Gladiolus 

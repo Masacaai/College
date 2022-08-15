@@ -1,0 +1,23 @@
+
+#include "prog2.h"
+
+#define PI 3.1415
+
+
+// #define DEBUG
+
+
+
+
+    // ....
+    //
+    //
+#ifdef DEBUG
+
+   printf("DEBUG MODE...\n");
+
+
+
+
+
+#endif

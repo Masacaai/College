@@ -1,0 +1,28 @@
+Enter number of stairs: 
+up:
+       X
+      XX
+     XXX
+    XXXX
+   XXXXX
+  XXXXXX
+ XXXXXXX
+XXXXXXXX
+down:
+X
+XX
+XXX
+XXXX
+XXXXX
+XXXXXX
+XXXXXXX
+XXXXXXXX
+up-down:
+       X
+      XXX
+     XXXXX
+    XXXXXXX
+   XXXXXXXXX
+  XXXXXXXXXXX
+ XXXXXXXXXXXXX
+XXXXXXXXXXXXXXX

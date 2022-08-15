@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Great13.dir/main.cpp.o -o Great13 

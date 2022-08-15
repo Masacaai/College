@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/masacaai/Code/CLionProjects/CS141/Gladiolus/main.cpp
+iostream
+-
+iomanip
+-
+cmath
+-
+

@@ -1,0 +1,70 @@
+
+#!/bin/bash
+
+#  TDIR="_TEST_RESULTS"
+
+#  rm -r -f $TDIR
+
+#  mkdir $TDIR
+
+  # script -a $TDIR/make.log ./compile
+  # ./compile 
+  #
+  runtest () {
+    # comment out line below once reference files have been generated
+      # $1 | grep ^@ > $2.ref
+
+    echo "---"
+
+    $1 < $2.inp | grep -v -e '^$' > $2.out
+    diff $2.out $2.ref > $2.diff
+    diff=`wc -c < $2.diff`
+    let score=0
+    if [ $diff = 0 ]; then
+       let "score = $3"
+    fi
+    let "max = $max + $3"
+    let "total = $total + $score"
+
+    echo "test $2 ; cmd: $1 ; score:  $score / $3"
+  }
+
+  make clean
+  make
+
+  let total=0
+  let max=0
+
+  runtest "./median3"  "p1t1" 3
+  runtest "./median3"  "p1t2" 3
+  runtest "./median3"  "p1t3" 3
+  runtest "./median3"  "p1t4" 3
+  runtest "./median3"  "p1t5" 3
+
+  runtest "./stairs"  "p2t1" 8
+  runtest "./stairs"  "p2t2" 8
+  runtest "./stairs"  "p2t3" 4
+
+  runtest "./num_ones"  "p3t1" 3
+  runtest "./num_ones"  "p3t2" 3
+  runtest "./num_ones"  "p3t3" 3
+  runtest "./num_ones"  "p3t4" 3
+  runtest "./num_ones"  "p3t5" 3
+
+  runtest "./histogram"  "p4t1" 6
+  runtest "./histogram"  "p4t2" 6
+  runtest "./histogram"  "p4t3" 6
+  runtest "./histogram"  "p4t4" 2
+
+  
+
+  
+
+  
+
+  echo
+  echo CUMMULATIVE SCORE:  $total "/" $max
+
+
+  
+

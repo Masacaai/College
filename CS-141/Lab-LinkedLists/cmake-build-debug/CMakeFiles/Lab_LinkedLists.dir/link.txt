@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/Lab_LinkedLists.dir/main.cpp.o -o Lab_LinkedLists 

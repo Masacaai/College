@@ -1,0 +1,516 @@
+Start testing: Mar 08 19:57 CST
+----------------------------------------------------------
+1/19 Testing: grid.defaultConstructor
+1/19 Test: grid.defaultConstructor
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.defaultConstructor" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.defaultConstructor" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.defaultConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.defaultConstructor
+[       OK ] grid.defaultConstructor (0 ms)
+[----------] 1 test from grid (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid.defaultConstructor" end time: Mar 08 19:57 CST
+"grid.defaultConstructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/19 Testing: grid.paramConstructorZeroValues
+2/19 Test: grid.paramConstructorZeroValues
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.paramConstructorZeroValues" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.paramConstructorZeroValues" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.paramConstructorZeroValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.paramConstructorZeroValues
+[       OK ] grid.paramConstructorZeroValues (0 ms)
+[----------] 1 test from grid (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid.paramConstructorZeroValues" end time: Mar 08 19:57 CST
+"grid.paramConstructorZeroValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/19 Testing: grid.paramConstructor
+3/19 Test: grid.paramConstructor
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.paramConstructor" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.paramConstructor" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.paramConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.paramConstructor
+[       OK ] grid.paramConstructor (185 ms)
+[----------] 1 test from grid (185 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (185 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"grid.paramConstructor" end time: Mar 08 19:57 CST
+"grid.paramConstructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/19 Testing: grid.copyConstructor
+4/19 Test: grid.copyConstructor
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.copyConstructor" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.copyConstructor" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.copyConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.copyConstructor
+[       OK ] grid.copyConstructor (342 ms)
+[----------] 1 test from grid (342 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (342 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"grid.copyConstructor" end time: Mar 08 19:57 CST
+"grid.copyConstructor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/19 Testing: grid.copyOperatorInitialization
+5/19 Test: grid.copyOperatorInitialization
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.copyOperatorInitialization" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.copyOperatorInitialization" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.copyOperatorInitialization
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.copyOperatorInitialization
+[       OK ] grid.copyOperatorInitialization (338 ms)
+[----------] 1 test from grid (338 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (338 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"grid.copyOperatorInitialization" end time: Mar 08 19:57 CST
+"grid.copyOperatorInitialization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/19 Testing: grid.copyOperatorPreExisting
+6/19 Test: grid.copyOperatorPreExisting
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.copyOperatorPreExisting" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.copyOperatorPreExisting" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.copyOperatorPreExisting
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.copyOperatorPreExisting
+[       OK ] grid.copyOperatorPreExisting (469 ms)
+[----------] 1 test from grid (469 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (469 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Passed.
+"grid.copyOperatorPreExisting" end time: Mar 08 19:57 CST
+"grid.copyOperatorPreExisting" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/19 Testing: grid.numrows
+7/19 Test: grid.numrows
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.numrows" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.numrows" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.numrows
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.numrows
+[       OK ] grid.numrows (0 ms)
+[----------] 1 test from grid (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid.numrows" end time: Mar 08 19:57 CST
+"grid.numrows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/19 Testing: grid.numcols
+8/19 Test: grid.numcols
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.numcols" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.numcols" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.numcols
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.numcols
+[       OK ] grid.numcols (0 ms)
+[----------] 1 test from grid (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"grid.numcols" end time: Mar 08 19:57 CST
+"grid.numcols" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/19 Testing: grid.size
+9/19 Test: grid.size
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.size" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.size" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.size
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.size
+[       OK ] grid.size (34 ms)
+[----------] 1 test from grid (34 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (34 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"grid.size" end time: Mar 08 19:57 CST
+"grid.size" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/19 Testing: grid.accessOperatorInvalid
+10/19 Test: grid.accessOperatorInvalid
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.accessOperatorInvalid" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.accessOperatorInvalid" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.accessOperatorInvalid
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.accessOperatorInvalid
+[       OK ] grid.accessOperatorInvalid (43 ms)
+[----------] 1 test from grid (43 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (43 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"grid.accessOperatorInvalid" end time: Mar 08 19:57 CST
+"grid.accessOperatorInvalid" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/19 Testing: grid.accessOperator
+11/19 Test: grid.accessOperator
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=grid.accessOperator" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"grid.accessOperator" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = grid.accessOperator
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from grid
+[ RUN      ] grid.accessOperator
+[       OK ] grid.accessOperator (282 ms)
+[----------] 1 test from grid (282 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (282 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.28 sec
+----------------------------------------------------------
+Test Passed.
+"grid.accessOperator" end time: Mar 08 19:57 CST
+"grid.accessOperator" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/19 Testing: maze.basic
+12/19 Test: maze.basic
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.basic" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.basic" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.basic
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.basic
+[       OK ] maze.basic (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.basic" end time: Mar 08 19:57 CST
+"maze.basic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/19 Testing: maze.tryingToGoThroughWalls
+13/19 Test: maze.tryingToGoThroughWalls
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.tryingToGoThroughWalls" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.tryingToGoThroughWalls" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.tryingToGoThroughWalls
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.tryingToGoThroughWalls
+[       OK ] maze.tryingToGoThroughWalls (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.tryingToGoThroughWalls" end time: Mar 08 19:57 CST
+"maze.tryingToGoThroughWalls" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/19 Testing: maze.startOnItem
+14/19 Test: maze.startOnItem
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.startOnItem" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.startOnItem" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.startOnItem
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.startOnItem
+[       OK ] maze.startOnItem (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.startOnItem" end time: Mar 08 19:57 CST
+"maze.startOnItem" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/19 Testing: maze.invalidChar
+15/19 Test: maze.invalidChar
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.invalidChar" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.invalidChar" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.invalidChar
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.invalidChar
+[       OK ] maze.invalidChar (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.invalidChar" end time: Mar 08 19:57 CST
+"maze.invalidChar" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/19 Testing: maze.escapeRegularMaze
+16/19 Test: maze.escapeRegularMaze
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.escapeRegularMaze" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.escapeRegularMaze" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.escapeRegularMaze
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.escapeRegularMaze
+[       OK ] maze.escapeRegularMaze (5 ms)
+[----------] 1 test from maze (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"maze.escapeRegularMaze" end time: Mar 08 19:57 CST
+"maze.escapeRegularMaze" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/19 Testing: maze.escapeTwistyMaze
+17/19 Test: maze.escapeTwistyMaze
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.escapeTwistyMaze" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.escapeTwistyMaze" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.escapeTwistyMaze
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.escapeTwistyMaze
+[       OK ] maze.escapeTwistyMaze (1 ms)
+[----------] 1 test from maze (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"maze.escapeTwistyMaze" end time: Mar 08 19:57 CST
+"maze.escapeTwistyMaze" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/19 Testing: maze.AllPurposeMaze1
+18/19 Test: maze.AllPurposeMaze1
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.AllPurposeMaze1" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.AllPurposeMaze1" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.AllPurposeMaze1
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.AllPurposeMaze1
+[       OK ] maze.AllPurposeMaze1 (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.AllPurposeMaze1" end time: Mar 08 19:57 CST
+"maze.AllPurposeMaze1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/19 Testing: maze.AllPurposeMaze2
+19/19 Test: maze.AllPurposeMaze2
+Command: "/home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/tests" "--gtest_filter=maze.AllPurposeMaze2" "--gtest_also_run_disabled_tests"
+Directory: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build
+"maze.AllPurposeMaze2" start time: Mar 08 19:57 CST
+Output:
+----------------------------------------------------------
+Running main() from /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = maze.AllPurposeMaze2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from maze
+[ RUN      ] maze.AllPurposeMaze2
+[       OK ] maze.AllPurposeMaze2 (0 ms)
+[----------] 1 test from maze (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"maze.AllPurposeMaze2" end time: Mar 08 19:57 CST
+"maze.AllPurposeMaze2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 08 19:57 CST

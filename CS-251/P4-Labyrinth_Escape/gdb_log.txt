@@ -1,0 +1,116 @@
+****************
+* REGULAR MAZE *
+****************
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-unknown-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+--Type <RET> for more, q to quit, c to continue without paging--
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ExploreTheRegularLabyrinth.exe...
+(gdb) b ExploreTheRegularLabyrinth.cpp:16
+Breakpoint 1 at 0x4027e5: file ExploreTheRegularLabyrinth.cpp, line 19.
+(gdb) r
+Starting program: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/ExploreTheRegularLabyrinth.exe 
+
+Breakpoint 1, main () at ExploreTheRegularLabyrinth.cpp:19
+19          if (isPathToFreedom(start, kPathOutOfRegularMaze)) {
+(gdb) i locals
+m = {_vptr.Maze = 0x40c1f0 <vtable for Maze+16>, grid = {_vptr.Grid = 0x40c210 <vtable for Grid<MazeCell*>+16>, NumRows = 4, Rows = 0x425f80}, numRows = 4, 
+  numCols = 4, kNumTwistyRooms = 12}
+start = 0x4263e0
+(gdb) p *start
+$1 = {whatsHere = "", north = 0x0, south = 0x426520, east = 0x0, west = 0x0}
+(gdb) p *(start->south)
+$2 = {whatsHere = "", north = 0x4263e0, south = 0x0, east = 0x426570, west = 0x0}
+(gdb) p *(start->south->east)
+$3 = {whatsHere = "", north = 0x426430, south = 0x4266b0, east = 0x4265c0, west = 0x426520}
+(gdb) p *(start->south->east->north)
+$4 = {whatsHere = "Spellbook", north = 0x0, south = 0x426570, east = 0x0, west = 0x0}
+(gdb) p *(start->south->east->east)
+$5 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x426610, west = 0x426570}
+(gdb) p *(start->south->east->east->east)
+$6 = {whatsHere = "", north = 0x4264d0, south = 0x0, east = 0x0, west = 0x4265c0}
+(gdb) p *(start->south->east->east->east->north)
+$7 = {whatsHere = "", north = 0x0, south = 0x426610, east = 0x0, west = 0x426480}
+(gdb) p *(start->south->east->east->east->north->west)
+$8 = {whatsHere = "Potion", north = 0x0, south = 0x0, east = 0x4264d0, west = 0x0}
+(gdb) p *(start->south->east->south)
+$9 = {whatsHere = "", north = 0x426570, south = 0x4267f0, east = 0x426700, west = 0x426660}
+(gdb) p *(start->south->east->south->west)
+$10 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x4266b0, west = 0x0}
+(gdb) p *(start->south->east->south->south)
+$11 = {whatsHere = "", north = 0x4266b0, south = 0x0, east = 0x426840, west = 0x4267a0}
+(gdb) p *(start->south->east->south->south->east)
+$12 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x426890, west = 0x4267f0}
+(gdb) p *(start->south->east->south->south->east->east)
+$13 = {whatsHere = "", north = 0x426750, south = 0x0, east = 0x0, west = 0x426840}
+(gdb) p *(start->south->east->south->south->east->east->north)
+$14 = {whatsHere = "Wand", north = 0x0, south = 0x426890, east = 0x0, west = 0x0}
+(gdb) p *(start->south->east->south->south->west)
+$15 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x4267f0, west = 0x0}
+
+***************
+* TWISTY MAZE *
+***************
+GNU gdb (GDB) 11.1
+Copyright (C) 2021 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-unknown-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ExploreTheTwistyLabyrinth.exe...
+(gdb) b ExploreTheTwistyLabyrinth.cpp:18
+Breakpoint 1 at 0x4027b6: file ExploreTheTwistyLabyrinth.cpp, line 20.
+(gdb) r
+Starting program: /home/masacaai/Code/CS-251/P4-Labyrinth_Escape/ExploreTheTwistyLabyrinth.exe 
+
+Breakpoint 1, main () at ExploreTheTwistyLabyrinth.cpp:20
+20          if (isPathToFreedom(start, kPathOutOfTwistyMaze)) {
+(gdb) p *start
+$1 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x0, west = 0x426950}
+(gdb) p *(start->west)
+$2 = {whatsHere = "", north = 0x426cb0, south = 0x426900, east = 0x0, west = 0x426a90}
+(gdb) p *(start->west->north)
+$3 = {whatsHere = "", north = 0x0, south = 0x426950, east = 0x4268b0, west = 0x0}
+(gdb) p *(start->west->north->east)
+$4 = {whatsHere = "", north = 0x426b30, south = 0x0, east = 0x426cb0, west = 0x0}
+(gdb) p *(start->west->north->east->north)
+$5 = {whatsHere = "", north = 0x4268b0, south = 0x426ae0, east = 0x0, west = 0x4269f0}
+(gdb) p *(start->west->north->east->north->west)
+$6 = {whatsHere = "Potion", north = 0x426ae0, south = 0x426b30, east = 0x426c60, west = 0x0}
+(gdb) p *(start->west->north->east->north->west->east)
+$7 = {whatsHere = "", north = 0x0, south = 0x4269a0, east = 0x0, west = 0x4269f0}
+(gdb) p *(start->west->north->east->north->west->east->south)
+$8 = {whatsHere = "Spellbook", north = 0x0, south = 0x0, east = 0x0, west = 0x426c60}
+(gdb) p *(start->west->north->east->north->west)
+$9 = {whatsHere = "Potion", north = 0x426ae0, south = 0x426b30, east = 0x426c60, west = 0x0}
+(gdb) p *(start->west->north->east->north->west->north)
+$10 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x4269f0, west = 0x426b30}
+(gdb) p *(start->west->west)
+$11 = {whatsHere = "", north = 0x426b80, south = 0x426950, east = 0x0, west = 0x426a40}
+(gdb) p *(start->west->west->north)
+$12 = {whatsHere = "Wand", north = 0x0, south = 0x426a90, east = 0x0, west = 0x0}
+(gdb) p *(start->west->west->west)
+$13 = {whatsHere = "", north = 0x426a90, south = 0x0, east = 0x0, west = 0x0}
+(gdb) p *(start->west->south)
+$14 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x0, west = 0x426950}

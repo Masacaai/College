@@ -29,5 +29,5 @@ A collection of all the projects I did in college:
 ## CS 398 Provably Correct Programming:
 Proved the MU Puzzle from GEB using the Coq proof assistant.
 
-## Python Code Jame 2022:
+## Python Code Jam 2022:
 Created a Restaurant manager program to handle staff check-ins and match customer orders with staff specialities.

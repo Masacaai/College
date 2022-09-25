@@ -18,10 +18,13 @@ A collection of all the projects I did in college:
 - Project 5: Create a service queue program that takes in new customer requests and assigns buzzers to them. Analogous to the reservation/seating system in a fine-dining restaurant.
 
 ## CS-251 Data Structures:
-- DNA Profiling: 
-- Personality Tests:
-- Bar Chart:
-- Labyrinth Escape:
-- MyMap:
-- File Compression:
-- Open Street Maps:
+- DNA Profiling: An app that is able to build DNA strands using the provided ourvector implementation and then determine who the DNA matches to in a database. 
+- Personality Tests: A program that is able to generate a personality quiz based on the five-factor model and match the player to a fictional character based on their answers.
+- Bar Chart: This application uses BarChartAnimate (which uses BarChart, which uses Bar) to produce an animated bar chart in the terminal.
+- Labyrinth Escape: A fun little game that teaches the use of gdb where you use gdb to naviagate a maze and find items.
+- MyMap: A re-implementation of a map in C++ using a self-balancing threaded binary search tree.
+- File Compression: An implementation of Huffman file compression.
+- OpenStreetMaps: A program that uses openstreetmaps data to calculate the distance between two people and the route to be taken by them to meet at a common point.
+
+## CS 398 Provably Correct Programming:
+Proved the MU Puzzle from GEB using the Coq proof assistant.

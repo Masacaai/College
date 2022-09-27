@@ -1,6 +1,6 @@
 # College
 
-A collection of all the projects I did in college:
+A collection of all the projects I did in college. Click on the sections below to learn more abut each course!
 
 <details>
 <summary>CS-141</summary>

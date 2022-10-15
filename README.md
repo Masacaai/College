@@ -44,3 +44,10 @@ A collection of all the projects I did in college. Click on the sections below t
 ## Provably Correct Programming:
 Proved the MU Puzzle from GEB using the Coq proof assistant.
 </details>
+
+<details>
+<summary>MATH-496</summary>
+
+## Machine Learning and Games:
+Used neural networks to create an AI that plays minesweeper.
+</details>

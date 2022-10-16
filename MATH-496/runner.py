@@ -1,9 +1,11 @@
+import os
 import pygame
 import sys
 import time
 
 from minesweeper import Minesweeper, MinesweeperAI
 
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 HEIGHT = 8
 WIDTH = 8
 MINES = 8

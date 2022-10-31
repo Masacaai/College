@@ -15,7 +15,7 @@ WHITE = (255, 255, 255)
 
 # Create game
 pygame.init()
-size = width, height = 600, 400
+size = width, height = 800, 600
 screen = pygame.display.set_mode(size)
 
 # Fonts
@@ -26,10 +26,10 @@ largeFont = pygame.font.Font(OPEN_SANS, 40)
 
 # Compute board size
 BOARD_PADDING = 20
-board_width = ((2 / 3) * width) - (BOARD_PADDING * 2)
-board_height = height - (BOARD_PADDING * 2)
+board_width = ((2 / 3) * 600) - (BOARD_PADDING * 2)
+board_height = 400 - (BOARD_PADDING * 2)
 cell_size = int(min(board_width / WIDTH, board_height / HEIGHT))
-board_origin = (BOARD_PADDING, BOARD_PADDING)
+board_origin = (BOARD_PADDING, BOARD_PADDING + 20)
 
 # Add images
 flag = pygame.image.load("/home/masacaai/Code/College/MATH-496/assets/images/flag.png")
@@ -38,7 +38,8 @@ mine = pygame.image.load("/home/masacaai/Code/College/MATH-496/assets/images/min
 mine = pygame.transform.scale(mine, (cell_size, cell_size))
 
 # Create game and AI agent
-game = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
+gameH = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
+gameR = gameH
 ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
 
 # Keep track of revealed cells, flagged cells, and if a mine was hit
@@ -98,6 +99,15 @@ while True:
         pygame.display.flip()
         continue
 
+    # Draw titles
+    titleH = mediumFont.render("Hard-Code", True, WHITE)
+    titleR = mediumFont.render("Q-Learning", True, WHITE)
+    titleHRect = titleH.get_rect()
+    titleRRect = titleR.get_rect()
+    titleHRect.center = (200, 20)
+    titleRRect.center = (600, 20)
+    screen.blit(titleH, titleHRect)
+    screen.blit(titleR, titleRRect)
     # Draw board
     cells = []
     for i in range(HEIGHT):
@@ -105,34 +115,41 @@ while True:
         for j in range(WIDTH):
 
             # Draw rectangle for cell
-            rect = pygame.Rect(
+            rectH = pygame.Rect(
                 board_origin[0] + j * cell_size,
                 board_origin[1] + i * cell_size,
                 cell_size, cell_size
             )
-            pygame.draw.rect(screen, GRAY, rect)
-            pygame.draw.rect(screen, WHITE, rect, 3)
+            rectR = pygame.Rect(
+                420 + j * cell_size,
+                board_origin[1] + i * cell_size,
+                cell_size, cell_size
+            )
+            pygame.draw.rect(screen, GRAY, rectH)
+            pygame.draw.rect(screen, WHITE, rectH, 3)
+            pygame.draw.rect(screen, GRAY, rectR)
+            pygame.draw.rect(screen, WHITE, rectR, 3)
 
             # Add a mine, flag, or number if needed
-            if game.is_mine((i, j)) and lost:
-                screen.blit(mine, rect)
+            if gameH.is_mine((i, j)) and lost:
+                screen.blit(mine, rectH)
             elif (i, j) in flags:
-                screen.blit(flag, rect)
+                screen.blit(flag, rectH)
             elif (i, j) in revealed:
                 neighbors = smallFont.render(
-                    str(game.nearby_mines((i, j))),
+                    str(gameH.nearby_mines((i, j))),
                     True, BLACK
                 )
                 neighborsTextRect = neighbors.get_rect()
-                neighborsTextRect.center = rect.center
+                neighborsTextRect.center = rectH.center
                 screen.blit(neighbors, neighborsTextRect)
 
-            row.append(rect)
+            row.append(rectH)
         cells.append(row)
 
     # AI Move button
     aiButton = pygame.Rect(
-        (2 / 3) * width + BOARD_PADDING, (1 / 3) * height - 50,
+        BOARD_PADDING, (5 / 6) * height,
         (width / 3) - BOARD_PADDING * 2, 50
     )
     buttonText = mediumFont.render("AI Move", True, BLACK)
@@ -143,7 +160,7 @@ while True:
 
     # Reset button
     resetButton = pygame.Rect(
-        (2 / 3) * width + BOARD_PADDING, (1 / 3) * height + 20,
+        (width / 3), (5 / 6) * height,
         (width / 3) - BOARD_PADDING * 2, 50
     )
     buttonText = mediumFont.render("Reset", True, BLACK)
@@ -153,7 +170,7 @@ while True:
     screen.blit(buttonText, buttonRect)
 
     # Display text
-    text = "Lost" if lost else "Won" if game.mines == flags else ""
+    text = "Lost" if lost else "Won" if gameH.mines == flags else ""
     text = mediumFont.render(text, True, WHITE)
     textRect = text.get_rect()
     textRect.center = ((5 / 6) * width, (2 / 3) * height)
@@ -163,19 +180,7 @@ while True:
 
     left, _, right = pygame.mouse.get_pressed()
 
-    # Check for a right-click to toggle flagging
-    if right == 1 and not lost:
-        mouse = pygame.mouse.get_pos()
-        for i in range(HEIGHT):
-            for j in range(WIDTH):
-                if cells[i][j].collidepoint(mouse) and (i, j) not in revealed:
-                    if (i, j) in flags:
-                        flags.remove((i, j))
-                    else:
-                        flags.add((i, j))
-                    time.sleep(0.2)
-
-    elif left == 1:
+    if left == 1:
         mouse = pygame.mouse.get_pos()
 
         # If AI button clicked, make an AI move
@@ -194,28 +199,19 @@ while True:
 
         # Reset game state
         elif resetButton.collidepoint(mouse):
-            game = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
+            gameH = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
             ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
             revealed = set()
             flags = set()
             lost = False
             continue
 
-        # User-made move
-        elif not lost:
-            for i in range(HEIGHT):
-                for j in range(WIDTH):
-                    if (cells[i][j].collidepoint(mouse)
-                            and (i, j) not in flags
-                            and (i, j) not in revealed):
-                        move = (i, j)
-
     # Make move and update AI knowledge
     if move:
-        if game.is_mine(move):
+        if gameH.is_mine(move):
             lost = True
         else:
-            nearby = game.nearby_mines(move)
+            nearby = gameH.nearby_mines(move)
             revealed.add(move)
             ai.add_knowledge(move, nearby)
 

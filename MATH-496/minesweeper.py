@@ -1,5 +1,6 @@
 import itertools
 import random
+from copy import *
 
 
 class Minesweeper():
@@ -32,6 +33,12 @@ class Minesweeper():
 
         # At first, player has found no mines
         self.mines_found = set()
+
+    def __eq__(self, other):
+        self.height = deepcopy(other.height)
+        self.width = deepcopy(other.width)
+        self.mines = deepcopy(other.mines)
+        self.board = deepcopy(other.board)
 
     def print(self):
         """

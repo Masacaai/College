@@ -1,12 +1,13 @@
 import pygame
 import sys
 import time
+import os
 
 from minesweeper import Minesweeper, MinesweeperAI
 
-HEIGHT = 8
-WIDTH = 8
-MINES = 8
+HEIGHT = 4
+WIDTH = 4
+MINES = 2
 
 # Colors
 BLACK = (0, 0, 0)
@@ -18,8 +19,11 @@ pygame.init()
 size = width, height = 800, 600
 screen = pygame.display.set_mode(size)
 
+# Compute relative path
+filepath = os.getcwd()
+
 # Fonts
-OPEN_SANS = "/home/masacaai/Code/College/MATH-496/assets/fonts/OpenSans-Regular.ttf"
+OPEN_SANS = filepath + "/assets/fonts/OpenSans-Regular.ttf"
 smallFont = pygame.font.Font(OPEN_SANS, 20)
 mediumFont = pygame.font.Font(OPEN_SANS, 28)
 largeFont = pygame.font.Font(OPEN_SANS, 40)
@@ -31,10 +35,11 @@ board_height = 400 - (BOARD_PADDING * 2)
 cell_size = int(min(board_width / WIDTH, board_height / HEIGHT))
 board_origin = (BOARD_PADDING, BOARD_PADDING + 20)
 
+
 # Add images
-flag = pygame.image.load("/home/masacaai/Code/College/MATH-496/assets/images/flag.png")
+flag = pygame.image.load(filepath + "/assets/images/flag.png")
 flag = pygame.transform.scale(flag, (cell_size, cell_size))
-mine = pygame.image.load("/home/masacaai/Code/College/MATH-496/assets/images/mine.png")
+mine = pygame.image.load(filepath + "/assets/images/mine.png")
 mine = pygame.transform.scale(mine, (cell_size, cell_size))
 
 # Create game and AI agent
@@ -47,8 +52,12 @@ revealed = set()
 flags = set()
 lost = False
 
-# Show instructions initially
-instructions = True
+# Open a logfile
+log = open("log.txt", "a")
+log.write("Board:\n")
+
+# Set automate to false initially
+automate = False
 
 while True:
 
@@ -58,47 +67,7 @@ while True:
             sys.exit()
 
     screen.fill(BLACK)
-
-    # Show game instructions
-    if instructions:
-
-        # Title
-        title = largeFont.render("Play Minesweeper", True, WHITE)
-        titleRect = title.get_rect()
-        titleRect.center = ((width / 2), 50)
-        screen.blit(title, titleRect)
-
-        # Rules
-        rules = [
-            "Click a cell to reveal it.",
-            "Right-click a cell to mark it as a mine.",
-            "Mark all mines successfully to win!"
-        ]
-        for i, rule in enumerate(rules):
-            line = smallFont.render(rule, True, WHITE)
-            lineRect = line.get_rect()
-            lineRect.center = ((width / 2), 150 + 30 * i)
-            screen.blit(line, lineRect)
-
-        # Play game button
-        buttonRect = pygame.Rect((width / 4), (3 / 4) * height, width / 2, 50)
-        buttonText = mediumFont.render("Play Game", True, BLACK)
-        buttonTextRect = buttonText.get_rect()
-        buttonTextRect.center = buttonRect.center
-        pygame.draw.rect(screen, WHITE, buttonRect)
-        screen.blit(buttonText, buttonTextRect)
-
-        # Check if play button clicked
-        click, _, _ = pygame.mouse.get_pressed()
-        if click == 1:
-            mouse = pygame.mouse.get_pos()
-            if buttonRect.collidepoint(mouse):
-                instructions = False
-                time.sleep(0.3)
-
-        pygame.display.flip()
-        continue
-
+        
     # Draw titles
     titleH = mediumFont.render("Hard-Code", True, WHITE)
     titleR = mediumFont.render("Q-Learning", True, WHITE)
@@ -108,6 +77,7 @@ while True:
     titleRRect.center = (600, 20)
     screen.blit(titleH, titleHRect)
     screen.blit(titleR, titleRRect)
+
     # Draw board
     cells = []
     for i in range(HEIGHT):
@@ -136,7 +106,7 @@ while True:
             elif (i, j) in flags:
                 screen.blit(flag, rectH)
             elif (i, j) in revealed:
-                neighbors = smallFont.render(
+                neighbors = largeFont.render(
                     str(gameH.nearby_mines((i, j))),
                     True, BLACK
                 )
@@ -168,29 +138,42 @@ while True:
     buttonRect.center = resetButton.center
     pygame.draw.rect(screen, WHITE, resetButton)
     screen.blit(buttonText, buttonRect)
+    
+    # Automate button
+    autoButton = pygame.Rect(
+        (2 / 3) * width - BOARD_PADDING, (5 / 6) * height,
+        (width / 3) - BOARD_PADDING * 2, 50
+    )
+    buttonText = mediumFont.render("Automate", True, BLACK)
+    buttonRect = buttonText.get_rect()
+    buttonRect.center = autoButton.center
+    pygame.draw.rect(screen, WHITE, autoButton)
+    screen.blit(buttonText, buttonRect)
 
     # Display text
     text = "Lost" if lost else "Won" if gameH.mines == flags else ""
     text = mediumFont.render(text, True, WHITE)
     textRect = text.get_rect()
-    textRect.center = ((5 / 6) * width, (2 / 3) * height)
+    textRect.center = (2 * BOARD_PADDING + 10, (3 / 4) * height)
     screen.blit(text, textRect)
 
     move = None
 
     left, _, right = pygame.mouse.get_pressed()
 
-    if left == 1:
+    if automate or (left == 1):
         mouse = pygame.mouse.get_pos()
 
         # If AI button clicked, make an AI move
-        if aiButton.collidepoint(mouse) and not lost:
+        if automate or (aiButton.collidepoint(mouse) and not lost):
             move = ai.make_safe_move()
             if move is None:
                 move = ai.make_random_move()
                 if move is None:
                     flags = ai.mines.copy()
                     print("No moves left to make.")
+                    automate = False
+                    log.close()
                 else:
                     print("No known safe moves, AI making random move.")
             else:
@@ -204,12 +187,20 @@ while True:
             revealed = set()
             flags = set()
             lost = False
+            if os.path.exists(filepath + "/log.txt"):
+                os.remove(filepath + "/log.txt")
             continue
+        
+        # Automate game
+        elif autoButton.collidepoint(mouse) and gameH.mines != flags and not lost:
+            automate = True
 
     # Make move and update AI knowledge
     if move:
         if gameH.is_mine(move):
             lost = True
+            automate = False
+            log.close()
         else:
             nearby = gameH.nearby_mines(move)
             revealed.add(move)

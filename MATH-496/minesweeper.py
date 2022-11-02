@@ -244,6 +244,17 @@ class MinesweeperAI():
         if changesMade:
             self.updateKnowledge(newSentence)
 
+    def removeEmpties(self):
+        empty = Sentence(set(), 0)
+        self.knowledge = [x for x in self.knowledge if x != empty]
+
+    def removeDupes(self):
+        unique_knowledge = []
+        for s in self.knowledge:
+            if s not in unique_knowledge:
+                unique_knowledge.append(s)
+        self.knowledge = unique_knowledge
+
     def add_knowledge(self, cell, count):
         """
         Called when the Minesweeper board tells us, for a given
@@ -269,6 +280,8 @@ class MinesweeperAI():
         self.knowledge.append(newSentence)
 
         self.updateKnowledge(newSentence)
+        self.removeEmpties()
+        self.removeDupes()
 
     def make_safe_move(self):
         """

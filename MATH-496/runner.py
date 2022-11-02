@@ -58,7 +58,10 @@ if os.path.exists(filepath + "/log.txt"):
 log = open("log.txt", "a")
 
 # Set count for number of games played
-count = 1
+countGames = 1
+
+# Set count for number of moves made
+countMoves = 0
 
 # Set newGame status
 newGame = True
@@ -73,8 +76,16 @@ while True:
 
         
     if newGame:
-        print("Reached newGame if")
-        log.write("Game " + str(count) + ":\n")
+        log.write("Game " + str(countGames) + ":\n")
+        og_stdout = sys.stdout
+        sys.stdout = log
+        gameH.print()
+        sys.stdout = og_stdout
+        log.write("Current knowledge:\n")
+        for i in ai.knowledge:
+            log.write(str(i)+ "\n")
+        log.write("\n")
+        log.flush()
         newGame = False
 
     screen.fill(BLACK)
@@ -190,7 +201,7 @@ while True:
                     flags = set()
                     lost = False
                     newGame = True
-                    count += 1
+                    countGames += 1
                     continue
         
                 # Automate game
@@ -204,12 +215,14 @@ while True:
             move = ai.make_random_move()
             if move is None:
                 flags = ai.mines.copy()
-                print("No moves left to make.")
+                log.write("No moves left to make.\n\n")
                 automate = False
             else:
-                print("No known safe moves, AI making random move.")
+                countMoves += 1
+                log.write("Move " + str(countMoves) + ": No known safe moves, AI making random move.\nClicked on " + str(move) + "\n")
         else:
-            print("AI making safe move.")
+            countMoves += 1
+            log.write("Move " + str(countMoves) + ": AI making safe move.\nClicked on " + str(move) + "\n")
             time.sleep(0.2)
         buttonClicked = False
 
@@ -217,10 +230,24 @@ while True:
     if move:
         if gameH.is_mine(move):
             lost = True
+            log.write("Game lost!\n\n")
             automate = False
         else:
             nearby = gameH.nearby_mines(move)
             revealed.add(move)
             ai.add_knowledge(move, nearby)
+
+            log.write("Current knowledge:\n")
+            for i in ai.knowledge:
+                log.write(str(i) + "\n")
+            log.write("Current known safes:\n")
+            for i in ai.safes:
+                log.write(str(i) + " ")
+            log.write("\nCurrent known mines:\n")
+            for i in ai.mines:
+                log.write(str(i) + " ")
+            
+            log.write("\n")
+            log.flush()
 
     pygame.display.flip()

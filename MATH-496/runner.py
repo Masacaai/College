@@ -53,18 +53,29 @@ flags = set()
 lost = False
 
 # Open a logfile
+if os.path.exists(filepath + "/log.txt"):
+    os.remove(filepath + "/log.txt")
 log = open("log.txt", "a")
-log.write("Board:\n")
 
-# Set automate to false initially
+# Set count for number of games played
+count = 1
+
+# Set newGame status
+newGame = True
+
+# Set buttonClicked status
+buttonClicked = False
+
+# Set automate status
 automate = False
 
 while True:
 
-    # Check if game quit
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            sys.exit()
+        
+    if newGame:
+        print("Reached newGame if")
+        log.write("Game " + str(count) + ":\n")
+        newGame = False
 
     screen.fill(BLACK)
         
@@ -159,48 +170,54 @@ while True:
 
     move = None
 
-    left, _, right = pygame.mouse.get_pressed()
+    # Check if game quit
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            log.close()
+            sys.exit()
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:
 
-    if automate or (left == 1):
-        mouse = pygame.mouse.get_pos()
+                # If AI button clicked, make an AI move
+                if  aiButton.collidepoint(event.pos) and not lost:
+                    buttonClicked = True      
 
-        # If AI button clicked, make an AI move
-        if automate or (aiButton.collidepoint(mouse) and not lost):
-            move = ai.make_safe_move()
-            if move is None:
-                move = ai.make_random_move()
-                if move is None:
-                    flags = ai.mines.copy()
-                    print("No moves left to make.")
-                    automate = False
-                    log.close()
-                else:
-                    print("No known safe moves, AI making random move.")
-            else:
-                print("AI making safe move.")
-            time.sleep(0.2)
-
-        # Reset game state
-        elif resetButton.collidepoint(mouse):
-            gameH = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
-            ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
-            revealed = set()
-            flags = set()
-            lost = False
-            if os.path.exists(filepath + "/log.txt"):
-                os.remove(filepath + "/log.txt")
-            continue
+                # Reset game state
+                elif resetButton.collidepoint(event.pos):
+                    gameH = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
+                    ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
+                    revealed = set()
+                    flags = set()
+                    lost = False
+                    newGame = True
+                    count += 1
+                    continue
         
-        # Automate game
-        elif autoButton.collidepoint(mouse) and gameH.mines != flags and not lost:
-            automate = True
+                # Automate game
+                elif autoButton.collidepoint(event.pos) and gameH.mines != flags and not lost:
+                    automate = True
+    
+    # Perform AI move if needed
+    if automate or buttonClicked:
+        move = ai.make_safe_move()
+        if move is None:
+            move = ai.make_random_move()
+            if move is None:
+                flags = ai.mines.copy()
+                print("No moves left to make.")
+                automate = False
+            else:
+                print("No known safe moves, AI making random move.")
+        else:
+            print("AI making safe move.")
+            time.sleep(0.2)
+        buttonClicked = False
 
     # Make move and update AI knowledge
     if move:
         if gameH.is_mine(move):
             lost = True
             automate = False
-            log.close()
         else:
             nearby = gameH.nearby_mines(move)
             revealed.add(move)

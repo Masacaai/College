@@ -5,8 +5,8 @@ import os
 
 from minesweeper import Minesweeper, MinesweeperAI
 
-HEIGHT = 16
-WIDTH = 16
+HEIGHT = 8
+WIDTH = 8
 MINES = (5 * HEIGHT * WIDTH) // 32
 
 # Colors

@@ -230,6 +230,15 @@ class MinesweeperAI():
                 if newSentence not in self.knowledge:
                     changesMade = True
                     self.knowledge.append(newSentence)
+            
+            elif s.cells.issubset(sentence.cells):
+                newCells = sentence.cells - s.cells
+                newCount = sentence.count - s.count
+                newSentence = Sentence(newCells, newCount)
+
+                if newSentence not in self.knowledge:
+                    changesMade = True
+                    self.knowledge.append(newSentence)
 
             allSafes |= s.known_safes()
             allMines |= s.known_mines()
@@ -257,6 +266,16 @@ class MinesweeperAI():
             if s not in unique_knowledge:
                 unique_knowledge.append(s)
         self.knowledge = unique_knowledge
+    
+    def removeObvious(self):
+        for s in self.knowledge:
+            cellsCopy = deepcopy(s.cells)
+            if s.count == 0 and len(s.cells) != 0:
+                for cell in cellsCopy:
+                    self.mark_safe(cell)
+            elif s.count == len(s.cells):
+                for cell in cellsCopy:
+                    self.mark_mine(cell)
 
     def add_knowledge(self, cell, count):
         """
@@ -285,6 +304,7 @@ class MinesweeperAI():
         self.updateKnowledge(newSentence)
         self.removeEmpties()
         self.removeDupes()
+        self.removeObvious()
 
     def make_safe_move(self):
         """

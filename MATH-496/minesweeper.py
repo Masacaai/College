@@ -167,6 +167,12 @@ class MinesweeperAI():
 
         # Keep track of which cells have been clicked on
         self.moves_made = set()
+        
+        # Keep track of available moves
+        self.probs = {}
+        for i in range(height):
+            for j in range(width):
+                self.probs[(i, j)] = 1
 
         # Keep track of cells known to be safe or mines
         self.mines = set()
@@ -181,6 +187,7 @@ class MinesweeperAI():
         to mark that cell as a mine as well.
         """
         self.mines.add(cell)
+        self.probs.pop(cell, None)
         for sentence in self.knowledge:
             sentence.mark_mine(cell)
 
@@ -190,6 +197,7 @@ class MinesweeperAI():
         to mark that cell as safe as well.
         """
         self.safes.add(cell)
+        self.probs.pop(cell, None)
         for sentence in self.knowledge:
             sentence.mark_safe(cell)
 
@@ -276,6 +284,14 @@ class MinesweeperAI():
             elif s.count == len(s.cells):
                 for cell in cellsCopy:
                     self.mark_mine(cell)
+    
+    def recalcProb(self):
+        for s in self.knowledge:
+            if s.cells:
+                prob = s.count / len(s.cells)
+                for cell in s.cells:
+                    if self.probs[cell] > prob:
+                        self.probs[cell] = prob
 
     def add_knowledge(self, cell, count):
         """
@@ -294,6 +310,7 @@ class MinesweeperAI():
         """
         # Mark the cell as safe, and that a move has been made
         self.moves_made.add(cell)
+        self.probs.pop(cell, None)
         self.mark_safe(cell)
         
         # Add new sentence
@@ -305,6 +322,7 @@ class MinesweeperAI():
         self.removeEmpties()
         self.removeDupes()
         self.removeObvious()
+        self.recalcProb()
 
     def make_safe_move(self):
         """
@@ -327,13 +345,21 @@ class MinesweeperAI():
             1) have not already been chosen, and
             2) are not known to be mines
         """
-        availMoves = set()
-        for i in range(self.height):
-            for j in range(self.width):
-                cell = (i, j)
-                if cell not in self.moves_made and cell not in self.mines:
-                    availMoves.add(cell)
-
-        if len(availMoves) > 0:
-            return availMoves.pop()
+        if len(self.probs) > 0:
+            return random.choice(list(self.probs.keys()))
         return None
+        
+    def make_calc_move(self):
+        """
+        Returns the best move to make on the Minesweeper
+        board based on probability.
+        """
+        if len(self.probs) > 0 and len(list(set(list(self.probs.values())))) != 1:            
+            movesList = [[x, self.probs[x]] for x in self.probs]
+            movesList.sort(key=lambda x: x[1])
+            bestProb = movesList[0][1]
+
+            bestMoves = [x for x in movesList if x[1] == bestProb]
+            return random.choice(bestMoves)[0]
+        return None
+

@@ -5,9 +5,8 @@ import os
 
 from minesweeper import Minesweeper, MinesweeperAI
 
-HEIGHT = 8
-WIDTH = 8
-MINES = (5 * HEIGHT * WIDTH) // 32
+SIZE = 16
+MINES = (5 * SIZE * SIZE) // 32
 
 # Colors
 BLACK = (0, 0, 0)
@@ -82,7 +81,7 @@ class DropDown():
 BOARD_PADDING = 20
 board_width = ((2 / 3) * width) - (BOARD_PADDING * 2)
 board_height = height - (BOARD_PADDING * 2)
-cell_size = int(min(board_width / WIDTH, board_height / HEIGHT))
+cell_size = int(min(board_width / SIZE, board_height / SIZE))
 board_origin = (BOARD_PADDING, BOARD_PADDING)
 
 
@@ -93,8 +92,8 @@ mine = pygame.image.load(filepath + "/assets/images/mine.png")
 mine = pygame.transform.scale(mine, (cell_size, cell_size))
 
 # Create game and AI agent
-game = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
-ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
+game = Minesweeper(height=SIZE, width=SIZE, mines=MINES)
+ai = MinesweeperAI(height=SIZE, width=SIZE)
 
 # Drop-down menu
 COLOR_INACTIVE = (100, 80, 255)
@@ -197,8 +196,6 @@ while True:
             lineRect.center = ((width / 2), 150 + 30 * i)
             screen.blit(line, lineRect)
         
-        
-        
         # Play game button
         playButton = pygame.Rect((width / 4), (3 / 4) * height, width / 2, 50)
         playButtonText = mediumFont.render("Play Game", True, BLACK)
@@ -231,9 +228,9 @@ while True:
     if mainGame:
         # Draw board
         cells = []
-        for i in range(HEIGHT):
+        for i in range(SIZE):
             row = []
-            for j in range(WIDTH):
+            for j in range(SIZE):
 
                 # Draw rectangle for cell
                 rect = pygame.Rect(
@@ -346,7 +343,6 @@ while True:
                 if playButton.collidepoint(event.pos):
                     instructions = False
                     mainGame = True
-                    time.sleep(0.3)
             elif mainGame:
                 # If AI button clicked, make an AI move
                 if  aiButton.collidepoint(event.pos) and not lost:
@@ -354,14 +350,17 @@ while True:
 
                 # Reset game state
                 elif resetButton.collidepoint(event.pos):
-                    game = Minesweeper(height=HEIGHT, width=WIDTH, mines=MINES)
-                    ai = MinesweeperAI(height=HEIGHT, width=WIDTH)
+                    game = Minesweeper(height=SIZE, width=SIZE, mines=MINES)
+                    ai = MinesweeperAI(height=SIZE, width=SIZE)
                     revealed = set()
                     flags = set()
                     lost = False
                     automate = False
+                    selected_option = -1
+                    move = False
                     buttonClicked = False
                     newGame = True
+                    countMoves = 0
                     countGames += 1
                     continue
         
@@ -371,8 +370,8 @@ while True:
 
                 # User-made move
                 elif not lost:
-                    for i in range(HEIGHT):
-                        for j in range(WIDTH):
+                    for i in range(SIZE):
+                        for j in range(SIZE):
                             if (cells[i][j].collidepoint(event.pos)
                                     and (i, j) not in flags
                                     and (i, j) not in revealed):
@@ -382,18 +381,22 @@ while True:
     if automate or buttonClicked:
         move = ai.make_safe_move()
         if move is None:
-            move = ai.make_random_move()
+            move = ai.make_calc_move()
             if move is None:
-                flags = ai.mines.copy()
-                log.write("No moves left to make.\n\n")
-                automate = False
+                move = ai.make_random_move()
+                if move is None:
+                    flags = ai.mines.copy()
+                    log.write("No moves left to make.\n\n")
+                    automate = False
+                else:
+                    countMoves += 1
+                    log.write("Move " + str(countMoves) + ": No safe or calculated moves, AI making random move.\nClicked on " + str(move) + "\n")
             else:
                 countMoves += 1
-                log.write("Move " + str(countMoves) + ": No known safe moves, AI making random move.\nClicked on " + str(move) + "\n")
+                log.write("Move " + str(countMoves) + ": No known safe moves, AI making calculated move.\nClicked on " + str(move) + "\n")
         else:
             countMoves += 1
             log.write("Move " + str(countMoves) + ": AI making safe move.\nClicked on " + str(move) + "\n")
-            time.sleep(0.2)
         buttonClicked = False
 
     # Make move and update AI knowledge
@@ -415,8 +418,11 @@ while True:
             log.write("\nCurrent known mines:\n")
             for i in ai.mines:
                 log.write(str(i) + " ")
-            
-            log.write("\n")
+            log.write("\nCurrent known probabilities:\n")
+            for i in ai.probs:
+                if ai.probs[i] != 1:
+                    log.write(str(i) + ": " + str(ai.probs[i]) + " ")
+            log.write("\n\n")
             log.flush()
 
     pygame.display.flip()

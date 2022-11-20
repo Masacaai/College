@@ -25,7 +25,7 @@ size = width, height = 1200, 800
 screen = pygame.display.set_mode(size)
 
 # Compute relative path
-filepath = os.getcwd()
+filepath = os.path.dirname(os.path.realpath(__file__))
 
 # Fonts
 BITFONT = filepath + "/assets/fonts/8-bit.ttf"

@@ -225,7 +225,6 @@ class MinesweeperAI():
         
         allSafes = set()
         allMines = set()
-
         for s in self.knowledge:
             if s == sentence:
                 continue
@@ -290,8 +289,9 @@ class MinesweeperAI():
             if s.cells:
                 prob = s.count / len(s.cells)
                 for cell in s.cells:
-                    if self.probs[cell] > prob:
-                        self.probs[cell] = prob
+                    if self.probs.get(cell):
+                        if self.probs[cell] > prob:
+                            self.probs[cell] = prob
 
     def add_knowledge(self, cell, count):
         """
@@ -312,10 +312,8 @@ class MinesweeperAI():
         self.moves_made.add(cell)
         self.probs.pop(cell, None)
         self.mark_safe(cell)
-        
         # Add new sentence
         neighborCells, count = self.getNeighbors(cell, count)
-
         newSentence = Sentence(neighborCells, count)
         self.knowledge.append(newSentence)
         self.updateKnowledge(newSentence)

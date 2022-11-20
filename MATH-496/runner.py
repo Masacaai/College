@@ -400,6 +400,7 @@ while True:
                     ai = MinesweeperAI(height=SIZE, width=SIZE)
                     revealed = set()
                     lost = False
+                    startTime = 0
                     automate = False
                     selected_option = -1
                     move = False

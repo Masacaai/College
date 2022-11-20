@@ -172,7 +172,7 @@ class MinesweeperAI():
         self.probs = {}
         for i in range(height):
             for j in range(width):
-                self.probs[(i, j)] = 1
+                self.probs[(i, j)] = 0
 
         # Keep track of cells known to be safe or mines
         self.mines = set()

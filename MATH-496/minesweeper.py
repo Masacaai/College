@@ -352,7 +352,7 @@ class MinesweeperAI():
         Returns the best move to make on the Minesweeper
         board based on probability.
         """
-        if len(self.probs) > 0 and len(list(set(list(self.probs.values())))) != 1:            
+        if len(self.probs) > 0 and len(list(set(list(self.probs.values())))) > 2:            
             movesList = [[x, self.probs[x]] for x in self.probs]
             movesList.sort(key=lambda x: x[1])
             bestProb = movesList[0][1]

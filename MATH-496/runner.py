@@ -469,7 +469,7 @@ while True:
                 log.write(str(i) + " ")
             log.write("\nCurrent known probabilities:\n")
             for i in ai.probs:
-                if ai.probs[i] != 1:
+                if ai.probs[i] != 0:
                     log.write(str(i) + ": " + str(ai.probs[i]) + " ")
             log.write("\n\n")
             log.flush()

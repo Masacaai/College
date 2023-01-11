@@ -46,6 +46,12 @@ Proved the MU Puzzle from GEB using the Coq proof assistant.
 </details>
 
 <details>
+<summary>CS-342</summary>
+
+## Software Design:
+</details>
+
+<details>
 <summary>MATH-496</summary>
 
 ## Machine Learning and Games:
